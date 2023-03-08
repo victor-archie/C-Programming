@@ -2,32 +2,26 @@
 /**
  * _strspn - gets the length of a prefix substring
  * @s: a pointer to the null-terminated string to search
- * @accept: pointer to null-terminated string containing characters to match
- * Return: Always 0.
+ * @accept: pointer containing characters to match
+ * Return: number of bytes
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
+	int z = 0, x, y;
 
-	while (*s != '\0')
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		int found = 0;
-
-		for (int i = 0; accept[i] != '\0'; i++)
+		if (s[x] != 32)
 		{
-			if (*s == accept[i])
+			for (y = 0; accept[y] != '\0'; y++)
 			{
-				found = 1;
-				break;
+				if (s[x] == accept[y])
+					z++;
 			}
 		}
-		if (!found)
-		{
-			break;
-		}
-		count++;
-		s++;
+		else
+			return (z);
 	}
-	return (count);
+		return (z);
 }
