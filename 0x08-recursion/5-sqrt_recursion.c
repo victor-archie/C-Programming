@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * check - checks for the square root
+ * _sqrt - checks for the square root
  * @m:int
  * @n:int
  *
@@ -11,7 +11,7 @@ int _sqrt(int m, int n)
 {
 	if (n == 1)
 		return (1);
-	else if (m * m != n)
+	else if (m * m > n)
 		return (-1);
 	else if (m * m == n)
 		return (m);
@@ -28,8 +28,8 @@ int _sqrt(int m, int n)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
+	if (n == 0)
+		return (0);
 	return (_sqrt(1, n));
 
 }
