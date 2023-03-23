@@ -8,9 +8,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	while (*name)
-	{
+	if (*name)
 		(*f)(name);
-		name++;
-	}
 }
