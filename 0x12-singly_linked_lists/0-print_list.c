@@ -1,9 +1,12 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * print_list - prints all element in list_t
  * @h: list to be printed
- * Return: int
+ * Return: all the elemnet in the list
  */
 
 size_t print_list(const list_t *h)
