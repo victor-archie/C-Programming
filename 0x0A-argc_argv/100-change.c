@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int cents, coins, nCoins;
 
 	if (args != 2)
 	{
@@ -17,9 +18,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int cents = atoi(argv[1]);
-	int coins = {25, 10, 5, 2, 1};
-	int nCoins = 0;
+	cents = atoi(argv[1]);
+	coins = {25, 10, 5, 2, 1};
+	nCoins = 0;
 
 	for (i = 0; i < sizeof(coins) / sizeof(coins[0]); i++)
 	{
