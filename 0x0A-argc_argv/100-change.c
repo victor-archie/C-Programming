@@ -10,24 +10,32 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int cents, coins, nCoins;
+	int cent;
+	int coins = 0;
 
-	if (args != 2)
+	if (argc == 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	cents = atoi(argv[1]);
-	coins = {25, 10, 5, 2, 1};
-	nCoins = 0;
+	cent = atoi(argv[1]);
 
-	for (i = 0; i < sizeof(coins) / sizeof(coins[0]); i++)
+	while (cent > 0)
 	{
-		nCoins += cents / coins[i];
-		cents %= coins[i];
+		if (cent >= 25)
+			cent -= 25;
+		else if (cent >= 10)
+			cent -= 10;
+		else if (cent >= 5)
+			cent -= 5;
+		else if (cent >= 2)
+			cent -= 2;
+		else if (cent >= 1)
+			cent -= 1;
+		Coins += 1;
 	}
 
-	printf("%d\n", nCoins);
+	printf("%d\n", Coins);
 	return (0);
 }
