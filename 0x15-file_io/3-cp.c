@@ -7,8 +7,8 @@
 
 /**
  * check_io_status - checks if a file can be opened or closed
- * @status: file descriptor of the file to be opened
- * @file_descriptor: file descriptor
+ * @stat: file descriptor of the file to be opened
+ * @fd: file descriptor
  * @filename: name of the file
  * @mode: closing or opening
  *
@@ -18,7 +18,7 @@ void check_io_status(int stat, int fd, char *filename, char mode)
 {
 	if (mode == 'C' && stat == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	else if (mode == 'O' && stat == -1)
