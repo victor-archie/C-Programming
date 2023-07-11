@@ -6,17 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void checkElf(unsigned char *e_ident);
-void printMagic(unsigned char *e_ident);
-void print_class(unsigned char *e_ident);
-void printData(unsigned char *e_ident);
-void print_version(unsigned char *e_ident);
-void Abi(unsigned char *e_ident);
-void os_abi(unsigned char *e_ident);
-void print_type(unsigned int e_type, unsigned char *e_ident);
-void print_entry(unsigned long int e_entry, unsigned char *e_ident);
-void close_elf(int elf);
-
 /**
  * checkElf - Checks if a file is an ELF file.
  * @e_ident: A pointer to an array containing the ELF magic numbers.
